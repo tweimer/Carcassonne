@@ -2,7 +2,7 @@ package carcassonne.model.grid;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -165,8 +165,7 @@ public class Grid {
                 }
             }
         }
-        Collections.sort(possibleMoves);
-        Collections.reverse(possibleMoves);
+        possibleMoves.sort(Comparator.reverseOrder());
         return possibleMoves;
     }
 
